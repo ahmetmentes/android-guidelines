@@ -44,7 +44,7 @@ Naming conventions for drawables:
 | Menu         | `menu_	`           | `menu_submenu_bg.9.png`     |
 | Notification | `notification_`	| `notification_bg.9.png`     |
 | Tabs         | `tab_`            | `tab_pressed.9.png`         |
-| Others       | `no_prefix` 	   | `background_image.png` |
+| Images       | `img_` 	   | `img_background.png` |
 
 Naming conventions for icons (taken from [Android iconography guidelines](http://developer.android.com/design/style/iconography.html)):
 
