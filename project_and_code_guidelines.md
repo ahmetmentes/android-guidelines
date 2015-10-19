@@ -7,18 +7,16 @@ New projects should follow the Android Gradle project structure that is defined 
 ## 1.2 Package structure 
 
 #### App
-* ui
-	* fragment
-	* activity
-	* dialog
-	* widget
-	* adapter
-* service
-* data
-	* remote
-	* local
-	* model	 
-* util
+* customviews
+* datatypes
+* dialogs
+* features
+	* login
+	* settings
+	* home
+* receivers
+* utils
+* webservice
 
 ## 1.3 File naming 
 
