@@ -213,18 +213,16 @@ class MyClass {
 }
 ```
 
-Braces around the statements are required unless the condition and the body fit on one line. 
-
-If the condition and the body fit on one line and that line is shorter than the max line length, then do __not__ use braces e.g.
+Always use braces e.g.
 
 ```java
-if (condition) body();
+if (condition) { body() };
 ```
 
 This is __bad__:
 
 ```java
-if (condition)
+if (condition) 
     body();  // bad!
 ```
         
