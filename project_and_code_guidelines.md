@@ -353,35 +353,6 @@ public User loadUser(Context context, int userId);
 public void loadUserAsync(Context context, int userId, UserCallback callback);
 ```
 
-### 2.2.13 String constants, naming and values
-
-Many elements of the Android SDK such as `SharedPreferences`, `Bundle` or `Intent` use a key-value pair approach so it's very likely that even for a small app you end up having to write a lot of String constants.
-
-When using one of these components, you __must__ define the keys as a `static final` fields and they should be prefixed as indicaded below. 
-
-| Element            | Field Name Prefix |
-| -----------------  | ----------------- |
-| SharedPreferences  | `PREF_`             |
-| Bundle             | `BUNDLE_`           | 
-| Fragment Arguments | `ARGUMENT_`         |   
-| Intent Extra       | `EXTRA_`            |
-| Intent Action      | `ACTION_`           |
-
-Note that the arguments of a Fragment - `Fragment.getArguments()` - are also a Bundle. However, because this is a quite common use of Bundles, we define a different prefix for them. 
-
-Example:
-
-```java
-// Note the value of the field is the same as the name to avoid duplication issues
-static final String PREF_EMAIL = "PREF_EMAIL";
-static final String BUNDLE_AGE = "BUNDLE_AGE";
-static final String ARGUMENT_USER_ID = "ARGUMENT_USER_ID";
-
-// Intent-related items use full package name as value
-static final String EXTRA_SURNAME = "com.myapp.extras.EXTRA_SURNAME";
-static final String ACTION_OPEN_USER = "com.myapp.action.ACTION_OPEN_USER";
-```
-
 ### 2.2.14 Arguments in Fragments and Activities
 
 When data is passed into an `Activity `or `Fragment` via `Intents` or a `Bundles`, the keys for the different values __must__ follow the rules described in the section above.
