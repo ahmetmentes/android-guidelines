@@ -402,27 +402,6 @@ loadPicture(context,
         "Title of the picture");
 ```
 
-### 2.2.16 RxJava chains styling 
-
-Rx chains of operators require line-wrapping. Every operator must go in a new line and the line should be broken before the `.`
-
-```java
-public Observable<Location> syncLocations() {
-    return mDatabaseHelper.getAllLocations()
-            .concatMap(new Func1<Location, Observable<? extends Location>>() {
-                @Override
-                 public Observable<? extends Location> call(Location location) {
-                     return mConcurService.getLocation(location.id);
-                 }
-            })
-            .retry(new Func2<Integer, Throwable, Boolean>() {
-                 @Override
-                 public Boolean call(Integer numRetries, Throwable throwable) {
-                     return throwable instanceof RetrofitError;
-                 }
-            });
-}
-```
 	
 ## 2.3 XML style rules
 
