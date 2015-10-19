@@ -315,9 +315,16 @@ public class MainActivity extends Activity {
     }
     
     @Override 
-    public void onCreate() {
-        ...
-    }
+    public void onCreate() {} 
+
+    @Override 
+    public void onResume() {}
+
+    @Override 
+    public void onPause() {}
+
+    @Override 
+    public void onDestroy() {}
     
     private void setUpView() {
         ...
@@ -328,27 +335,6 @@ public class MainActivity extends Activity {
     }
 
 } 
-```
-
-If your class is extending and __Android component__ such as an Activity or a Fragment, it is a good practise to order the override methods so that they __match the component's lifecycle__. For example, if you have an Activity that implements `onCreate()`, `onDestroy()`, `onPause()` and `onResume()`, then the correct order is:
-
-```java
-public class MainActivity extends Activity {
-
-	//Order matches Activity lifecycle	
-    @Override 
-    public void onCreate() {} 
-    
-    @Override 
-    public void onResume() {}
-    
-    @Override 
-    public void onPause() {}
-    
-    @Override 
-    public void onDestory() {}
-
-}
 ```
 
 ### 2.2.11 Parameter ordering in methods
