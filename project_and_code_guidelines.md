@@ -330,12 +330,12 @@ When data is passed into an `Activity `or `Fragment` via `Intents` or a `Bundles
 
 When an `Activity` or `Fragment` expect arguments, it should provide a `static public` method that facilitates the creation of the `Fragment` or `Intent`.
 
-In the case of Activities the method is usually called `getStartIntent()`
+In the case of Activities the method is usually called `newIntent()`
 
 ```java
-public static Intent getStartIntent(Context context, User user) {
+public static Intent newIntent(Context context, User user) {
 	Intent intent = new Intent(context, ThisActivity.class);
-	intent.putParcelableExtra(EXTRA_USER, user);
+	intent.putParcelableExtra(USER, user);
 	return intent;
 }
 ```
