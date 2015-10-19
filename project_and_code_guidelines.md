@@ -297,11 +297,11 @@ There is no single correct solution for this but using a __logical__ and __consi
 
 1. Constants 
 2. Fields 
-3. Constructors 
-4. Override methods and callbacks (public or private)
-5. Public methods
-6. Private methods
-7. Inner classes or interfaces
+3. Static Methods
+4. Constructors 
+5. Override methods
+6. Callbacks and Interfaces
+7. Inner classes
 
 Example:
 
@@ -309,10 +309,9 @@ Example:
 public class MainActivity extends Activity {
 
 	private String mTitle;
-    private TextView mTextViewTitle;
     
-    public void setTitle(String title) {
-    	mTitle = title;
+    public static Intent newIntent(Context context) {
+    	
     }
     
     @Override 
